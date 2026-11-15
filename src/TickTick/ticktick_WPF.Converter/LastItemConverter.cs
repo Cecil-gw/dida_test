@@ -1,0 +1,28 @@
+using System;
+using System.Globalization;
+using System.Windows.Controls;
+using System.Windows.Data;
+
+namespace ticktick_WPF.Converter;
+
+public class LastItemConverter : IValueConverter
+{
+	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+	{
+		if (value is ContentPresenter container)
+		{
+			ItemsControl itemsControl = ItemsControl.ItemsControlFromItemContainer(container);
+			if (itemsControl != null)
+			{
+				int count = itemsControl.Items.Count;
+				return itemsControl.ItemContainerGenerator.IndexFromContainer(container) == count - 1;
+			}
+		}
+		return false;
+	}
+
+	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+	{
+		throw new NotImplementedException();
+	}
+}

@@ -1,0 +1,35 @@
+namespace ticktick_WPF.Resource;
+
+public enum AppIconKey
+{
+	Default,
+	SClassic,
+	CClassic,
+	SClassicPro,
+	SOrangePro,
+	SPinkPro,
+	SGreenPro,
+	SYellowPro,
+	SBlackPro,
+	GYellowPro,
+	GRedPro,
+	GSiriPro,
+	GBluePro,
+	LRedPro,
+	LYellowPro,
+	LGreenPro,
+	ScratchBluePro,
+	WGreenPro,
+	Plump3d,
+	Emotion,
+	Macintosh,
+	Ai,
+	Spaceship,
+	Mechanical,
+	Neon,
+	Planet,
+	PlanetPro,
+	Dark_Linear,
+	Christmas,
+	SpringFestival
+}

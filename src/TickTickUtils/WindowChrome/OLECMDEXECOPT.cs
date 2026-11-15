@@ -1,0 +1,9 @@
+namespace WindowChrome;
+
+internal enum OLECMDEXECOPT
+{
+	DODEFAULT,
+	PROMPTUSER,
+	DONTPROMPTUSER,
+	SHOWHELP
+}

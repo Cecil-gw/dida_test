@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<SyntaxDefinition name="Patch" extensions=".patch;.diff" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+	<Color name="AddedText" foreground="#5FC878" exampleText="+added" />
+	<Color name="RemovedText" foreground="#FF7A7A" exampleText="-removed" />
+	<Color name="UnchangedText" exampleText=" unchanged" />
+	<Color name="Position" foreground="#D8FFFFFF" exampleText="@@ -186,6 +186,12 @@" />
+	<Color name="Header" foreground="#FF7A7A" exampleText="--- (oldversion)&#10;+++ (newversion)" />
+	<Color name="FileName" foreground="#8FB3FF" fontWeight="bold" exampleText="Index: path/to/file" />
+	<RuleSet>
+		<Span color="FileName">
+			<Begin>Index:\s</Begin>
+		</Span>
+		<Span color="Header">
+			<Begin>==</Begin>
+		</Span>
+		<Span color="Header">
+			<Begin>---</Begin>
+		</Span>
+		<Span color="Header">
+			<Begin>\+\+\+</Begin>
+		</Span>
+		<Span foreground="#C792EA">
+			<Begin>@@</Begin>
+		</Span>
+		<Span color="RemovedText">
+			<Begin>-</Begin>
+		</Span>
+		<Span color="AddedText">
+			<Begin>\+</Begin>
+		</Span>
+		<Span color="UnchangedText">
+			<Begin>\s</Begin>
+		</Span>
+	</RuleSet>
+</SyntaxDefinition>

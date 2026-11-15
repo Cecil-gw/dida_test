@@ -1,0 +1,24 @@
+using System;
+using System.Globalization;
+using System.Windows.Data;
+using ticktick_WPF.Resource;
+using ticktick_WPF.Util;
+
+namespace ticktick_WPF.Converter;
+
+public class PermissionTextColorConverter : IValueConverter
+{
+	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+	{
+		if (value is Constants.ProjectPermission projectPermission && parameter is string s && int.TryParse(s, out var result) && projectPermission == (Constants.ProjectPermission)result)
+		{
+			return ThemeUtil.GetColor("PrimaryColor");
+		}
+		return ThemeUtil.GetColor("BaseColorOpacity100_80");
+	}
+
+	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+	{
+		return null;
+	}
+}

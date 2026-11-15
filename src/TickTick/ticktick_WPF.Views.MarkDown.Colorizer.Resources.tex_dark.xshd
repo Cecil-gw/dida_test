@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!-- syntaxdefinition for TeX document 2001 by Mike Krueger (gleaned from Jedit) -->
+
+<SyntaxDefinition name = "TeX" extensions = ".tex">
+
+	<Digits   name = "Digits" bold = "false" italic = "false" color = "#D8FFFFFF"/>
+
+	<RuleSets>
+		<RuleSet ignorecase = "false">
+		  	<Delimiters>&amp;~!@%^*()-+=|\#/{}[]:;"'&lt;&gt; , .?</Delimiters>
+
+			<Span name = "LineComment" bold = "false" italic = "true" color = "#8A8A8A" stopateol = "true">
+				<Begin>%</Begin>
+			</Span>
+
+			<Span name = "MathMode" rule = "MathMode" bold = "false" italic = "false" color = "#D8FFFFFF" stopateol = "false">
+				<Begin>$$</Begin>
+				<End>$$</End>
+			</Span>
+			<Span name = "LatexMathMode" rule = "MathMode" bold = "false" italic = "false" color = "#D8FFFFFF" stopateol = "false">
+				<Begin>\[</Begin>
+				<End>\]</End>
+			</Span>
+
+			<!-- \... commands -->
+			<MarkFollowing markmarker ="true" bold = "true" italic = "false" color = "#D98B4E">\</MarkFollowing>
+
+			<!-- some commands must be handled specially -->
+			<KeyWords name = "Keyword1" bold = "false" italic = "false" color = "#6FD6C6">
+				<Key word = "\$" />
+				<Key word = "\\" />
+				<Key word = "\%" />
+		  	</KeyWords>
+
+			<KeyWords name = "KeyWords2" bold="true" italic="false" color="#D8FFFFFF">
+				    <Key word = ")" />
+				    <Key word = ")" />
+				    <Key word = "{" />
+				    <Key word = "}" />
+				    <Key word = "[" />
+				    <Key word = "]" />
+				    <Key word = "=" />
+				    <Key word = "!" />
+				    <Key word = "+" />
+				    <Key word = "-" />
+				    <Key word = "/" />
+				    <Key word = "*" />
+				    <Key word = "&gt;" />
+				    <Key word = "&lt;" />
+				    <Key word = "&amp;" />
+				    <Key word = "|" />
+				    <Key word = "^" />
+				    <Key word = "~" />
+				    <Key word = "." />
+				    <Key word = "," />
+				    <Key word = ";" />
+				    <Key word = "?" />
+				    <Key word = ":" />
+				    <Key word = "'" />
+	<!--			    <Key word = """ />-->
+				    <Key word = "`" />
+	 	 	</KeyWords>
+		</RuleSet>
+
+		<RuleSet name = "MathMode" ignorecase = "false">
+		  	<Delimiters>&amp;~!@%^*()-+=|\#/{}[]:;"'&lt;&gt; , .?</Delimiters>
+
+
+			<Span name = "LineComment" bold = "false" italic = "true" color = "#8A8A8A" stopateol = "true">
+				<Begin>%</Begin>
+			</Span>
+
+			<!-- \... commands -->
+			<MarkFollowing markmarker ="true" bold = "true" italic = "false" color = "#D98B4E">\</MarkFollowing>
+
+			<KeyWords name = "KeyWords2" bold="true" italic="false" color="#D8FFFFFF">
+				    <Key word = ")" />
+				    <Key word = ")" />
+				    <Key word = "{" />
+				    <Key word = "}" />
+				    <Key word = "[" />
+				    <Key word = "]" />
+				    <Key word = "=" />
+				    <Key word = "!" />
+				    <Key word = "+" />
+				    <Key word = "-" />
+				    <Key word = "/" />
+				    <Key word = "*" />
+				    <Key word = "&gt;" />
+				    <Key word = "&lt;" />
+				    <Key word = "&amp;" />
+				    <Key word = "|" />
+				    <Key word = "^" />
+				    <Key word = "~" />
+				    <Key word = "." />
+				    <Key word = "," />
+				    <Key word = ";" />
+				    <Key word = "?" />
+				    <Key word = ":" />
+				    <Key word = "'" />
+	<!--			    <Key word = """ />-->
+				    <Key word = "`" />
+	 	 	</KeyWords>
+		</RuleSet>
+	</RuleSets>
+
+</SyntaxDefinition>
+
